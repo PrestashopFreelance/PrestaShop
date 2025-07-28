@@ -1,0 +1,10 @@
+# modules/cmswysiwyng/config/services.yml
+services:
+  YourVendor\Cmswysiwyng\Form\Extension\CmsCategoryFormExtension:
+    class: YourVendor\Cmswysiwyng\Form\Extension\CmsCategoryFormExtension
+    arguments:
+      - '@translator'
+      - '@prestashop.adapter.legacy.context'
+    tags:
+      - { name: form.type_extension, extended_type: PrestaShopBundle\Form\Admin\Improve\Design\Pages\CmsPageCategoryType }
+      

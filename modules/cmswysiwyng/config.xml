@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>cmswysiwyng</name>
+  <displayName>CMS WYSIWYG Extra Field</displayName>
+  <version>1.0.0</version>
+  <author>Your Name</author>
+  <tab>administration</tab>
+  <compatibility>
+    <minVersion>9.0.0</minVersion>
+    <maxVersion>9.99.99</maxVersion>
+  </compatibility>
+  <description>Adds an extra WYSIWYG description field to CMS category edit form.</description>
+</module>

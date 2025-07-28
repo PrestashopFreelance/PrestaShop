@@ -1,0 +1,16 @@
+{
+  "name": "your-vendor/cmswysiwyng",
+  "version": "1.0.0",
+  "type": "prestashop-module",
+  "description": "Adds a WYSIWYG extra description field to CMS category edit form in PrestaShop 9.",
+  "license": "AFL-3.0",
+  "authors": [
+    { "name": "Your Name", "email": "you@example.com" }
+  ],
+  "require": { "php": ">=7.4" },
+  "autoload": {
+    "psr-4": {
+      "YourVendor\\Cmswysiwyng\\": "src/"
+    }
+  }
+}
