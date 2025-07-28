@@ -2,7 +2,12 @@
 if (!defined('_PS_VERSION_')) {
     exit;
 }
-use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+/**
+ * CMS WYSIWYG Extra Field Module
+ *
+ * This module adds an extra WYSIWYG description field to the CMS category edit form.
+ * It also handles the installation and uninstallation of the module, including database changes.
+ */
 class Cmswysiwyng extends Module
 {
     public function __construct()
@@ -90,8 +95,11 @@ class Cmswysiwyng extends Module
      */
     public function hookActionAdminControllerSetMedia()
     {
-        // Add the TinyMCE JavaScript file to the admin controller
-        $this->context->controller->addJS($this->_path . 'views/js/cmsedit.js');
+        $isLegacyEdit = 'AdminCmsContent' === Tools::getValue('controller')
+            && (int) Tools::getValue('id_cms_category') > 0;   
+        if ($isLegacyEdit) {
+            $this->context->controller->addJS($this->_path . 'views/js/cmsedit.js');
+        }
     }
 
        public function hookActionAfterCreateCmsPageCategoryFormHandler(array $params)
